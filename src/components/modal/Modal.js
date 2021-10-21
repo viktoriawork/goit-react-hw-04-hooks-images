@@ -4,19 +4,19 @@ import { createPortal } from "react-dom";
 import { ModalStyled } from "./ModalStyled";
 
 const modalRoot = document.querySelector("#modal-root");
-const modalScroll = (overflowValue, positionValue) => {
-  const body = document.querySelector("body");
-  body.style.overflow = overflowValue;
-  body.style.position = positionValue;
-};
+// const modalScroll = (overflowValue, positionValue) => {
+//   const body = document.querySelector("body");
+//   body.style.overflow = overflowValue;
+//   body.style.position = positionValue;
+// };
 
 const Modal = ({ onCloseModal, children }) => {
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
-    modalScroll("hidden", "fixed");
+    // modalScroll("hidden", "fixed");
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
-      modalScroll("auto", "relative");
+      // modalScroll("auto", "relative");
     };
   }, []);
 
